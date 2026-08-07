@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winget-tui"
+version = "0.1.0"
+description = "TUI + CLI for updating winget packages with a persistent blacklist"
+requires-python = ">=3.10"
+dependencies = ["textual>=8.0"]
+
+[project.scripts]
+winget-tui = "winget_tui.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["winget_tui*"]
